@@ -1,4 +1,4 @@
-{% set version = "0.5" %}
+{% set version = "0.5.1" %}
 
 package:
   name: webencodings
@@ -7,7 +7,7 @@ package:
 source:
   fn: webencodings-{{ version }}.tar.gz
   url: https://github.com/gsnedders/python-webencodings/archive/v{{ version }}.tar.gz
-  sha256: 60d6c6566f830383a5ebebf18466648d57f179251fe6647e87dde16b981b0248
+  sha256: 082367f568a7812aa5f6922ffe3d9d027cd83829dc32bcaac4c874eeed618000
 
 build:
   number: 0

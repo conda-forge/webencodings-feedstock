@@ -11,14 +11,14 @@ source:
 build:
   number: 1
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install .
 
 requirements:
   host:
-    - python
+    - python >=2.6
     - pip
   run:
-    - python
+    - python >=2.6
 
 test:
   imports:
@@ -26,8 +26,7 @@ test:
 
 about:
   home: https://github.com/gsnedders/python-webencodings
-  license: BSD 3-Clause
-  license_family: BSD
+  license: BSD-3-Clause
   license_file: LICENSE
   doc_url: https://pythonhosted.org/webencodings
   dev_url: https://github.com/gsnedders/python-webencodings

@@ -1,24 +1,25 @@
 schema_version: 1
 
 context:
-  version: "0.5.1"
+  version: 0.6.1
 
 package:
   name: webencodings
   version: ${{ version }}
 
 source:
-  url: https://github.com/gsnedders/python-webencodings/archive/v${{ version }}.tar.gz
-  sha256: 082367f568a7812aa5f6922ffe3d9d027cd83829dc32bcaac4c874eeed618000
+  url: https://files.pythonhosted.org/packages/source/w/webencodings/webencodings-${{ version }}.tar.gz
+  sha256: 565f9ad031c702dae404e27a099e3e09186a3ab1b9520f06d215502b651fd910
 
 build:
-  number: 3
+  number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install .
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python ${{ python_min }}.*
+    - flit-core >=3.2,<5
     - pip
   run:
     - python >=${{ python_min }}
@@ -44,4 +45,3 @@ extra:
   recipe-maintainers:
     - jschueller
     - ocefpaf
-
